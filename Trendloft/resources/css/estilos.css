@@ -31,8 +31,8 @@ header{
 	overflow: hidden;
 	margin-bottom: 20px;
 	position: fixed;
-	background-color: rgba(0,0,0,0.75);
-	/*background-color: #FDF3E7;*/
+	/*background-color: rgba(0,0,0,0.75);*/
+	background-color: #FDF3E7;
 	/*background-color: #C63D0F;*/
 	z-index: 1;
 }
@@ -84,7 +84,7 @@ header nav.social a:hover{
 
 header nav.menu a{
 	display: inline-block;;
-	color: #f2f2f2;
+	color: #585858;
 	text-decoration: none;
 	padding: 10px 20px;
 	line-height: normal;
@@ -96,7 +96,7 @@ header nav.menu a{
 }
 
 header nav.menu a:hover{
-	color: #585858;
+	color: #C63D0F;
 }
 
 .titulo{
@@ -125,7 +125,40 @@ h2 {
 footer{
 	width: 100%;
 	overflow: hidden;
-	background: rgba(0,0,0,0.6);
+	background: rgba(198, 61, 15, 0.5);
+}
+
+footer a{
+
+		display: inline-block;
+		color: #585858;
+		text-decoration: none;
+		padding: 10px 20px;
+		line-height: normal;
+		font-family: 'Montserrat', serif;
+		font-size: 16px;
+		-webkit-transition: all 200ms ease;
+		-o-transition: all 200ms ease;
+		transition: all 200ms ease;
+}
+
+footer ul.redesFoot li a img{
+	width: auto;
+	max-width: 70px;
+	max-height: 70px;
+	line-height: 70px;
+}
+
+footer ul.redesFoot li a{
+
+	padding: 15px 40px;
+	-webkit-transition: all 200ms ease;
+	-o-transition: all 200ms ease;
+	transition: all 200ms ease;
+}
+
+footer a:hover {
+	color: #FDF3E7;
 }
 
 footer .info{
