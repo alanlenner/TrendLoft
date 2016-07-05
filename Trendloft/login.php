@@ -1,21 +1,28 @@
-<?php include('header.php');?>
+<?php
+include('header.php');
 
+$mysqli = new mysqli("127.0.0.1", "root", "", "trendloft", 3306);
+if ($mysqli->connect_errno) {
+  echo "Fallo al contenctar a MySQL: (" . $mysqli->connect_errno . ") " . $mysqli->connect_error;
+}
+?>
 <link rel = "stylesheet" href="resources/css/Login.css">
-<div class="wrapper">
-  <form action="" method="post" class="login">
+<div class="wrapper imagenInicio">
 
+  <form action="" method="post" class="well well-sm form-horizontal">
       <div class="form-group">
-        <label for="user">Email</label>
-        <input name="user" type="text" >
+        <label class="control-label col-md-2" for="user">Email</label>
+        <input class= "form-control col-md-10" name="user" type="text" >
       </div>
       <div class="form-group">
-        <label for="password">Password</label>
-        <input name="password" type="password">
+        <label class="control-label col-md-2"  for="password">Password</label>
+        <input class="form-control col-md-10" name="password" type="password">
       </div>
-      <div class="form-group">
-        <input name="login" type="submit" value="login">
+      <div class="col-md-12 col-md-offset-2">
+          <input type="submit" name="login" style="float:right;" class="btn btn-personalizado" value="Log In">
       </div>
   </form>
+
 </div>
 
 
@@ -26,21 +33,17 @@ session_start(); //session_start() crea una sesión para ser usada mediante una 
 
 function verificar_login($user,$password,&$result)
     {
-		$sql = "SELECT * FROM usuarios WHERE usuario = '$user' and password = '$password'";
-        $rec = mysql_query($sql);
-        $count = 0;
-        while($row = mysql_fetch_object($rec))
+		$sql = "SELECT * FROM usuarios WHERE correo = '$user' and pass = '$password'";
+        $result = mysqli_query($mysqli, $sql);
+        $totalFilas=mysql_num_rows($result);
+
+        if ($totalFilas ==0)
         {
-            $count++;
-            $result = $row;
-        }
-        if($count == 1)
-        {
-            return 1;
+            return 0;
         }
         else
         {
-            return 0;
+            return 1;
         }
     }
 
