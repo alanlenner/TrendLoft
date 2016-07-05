@@ -24,11 +24,12 @@
 		<section>
 			<header>
 				<div class="wrapper">
-					<div class="logo"><img src="resources/images/Main_TL_Logo_NoName.png" alt=""></div>
+					<div class="logo"><img src="resources/images/logoTrendL.jpg" alt=""></div>
 					<nav class="menu">
 						<a href="#home">Home</a>
-						<a href="#about">About Us</a>
-						<a href="#info">Contact</a>
+						<a href="#furniture">Furniture</a>
+						<a href="#cabinet">Cabinets</a>
+						<a href="#lighting">Lighting</a>
 					</nav>
           <nav class="social">
 						<a href="http://facebook.com/trendloft"><img src="resources/images/facebookIco.png" alt=""></a>
@@ -46,36 +47,48 @@
 					</div>
 			</div>
 
-			<div class="about wrapper" id="about">
-				<p>
-					<h2>About Us</h2>
 
-					Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus.
-
-					Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales sagittis magna. Sed consequat, leo eget bibendum sodales, augue velit cursus nunc, quis gravida magna mi a libero. Fusce vulputate eleifend sapien. Vestibulum purus quam, scelerisque ut, mollis sed, nonummy id, metus. Nullam accumsan lorem in dui. Cras ultricies mi eu turpis hendrerit fringilla. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; In ac dui quis mi consectetuer lacinia. Nam pretium turpis et arcu. Duis arcu tortor, suscipit eget, imperdiet nec, imperdiet iaculis, ipsum. Sed aliquam ultrices mauris. Integer ante arcu, accumsan a, consectetuer eget, posuere ut, mauris. Praesent adipiscing. Phasellus ullamcorper ipsum rutrum nunc. Nunc nonummy metus. Vestibulum volutpat pretium libero. Cras id dui. Aenean ut
-
-					Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus.
-				</p>
-			</div>
 
 
 			<footer>
 				<div class="info wrapper" id="info">
 					<div class="row icono">
-						<div class="col-md-4"><span class="glyphicon glyphicon-earphone" aria-hidden="true"></span>
+						<div class="col-md-4">
+							<span class="glyphicon glyphicon-user" aria-hidden="true"></span>
+							<hr>
 						</div>
-						<div class="col-md-4"><span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span>
+						<div class="col-md-4">
+							<span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span>
+							<hr>
 						</div>
-						<div class="col-md-4"><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>
+						<div class="col-md-4">
+							<span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span>
+							<hr>
 						</div>
 					</div>
 					<div class="row">
-						<div class="col-md-4"><p>+1 (786) 660-4619</p>
+
+						<div class="col-md-4">
+							<a href="#info">About Us</a>
+						<p>	Establishments primarily engaged in the retail sale of household furniture. These stores may also sell home furnishings, major appliances, and floor coverings.
+						</p>
 						</div>
-						<div class="col-md-4"><p>500 NE 185th St. Miami, FL. 33179</p>
+						<div class="col-md-4">
+							<p>500 NE 185th St. Miami, FL. 33179</p>
+							<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2707.792914175818!2d-66.87145266086156!3d10.466309556093748!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0000000000000000%3A0xdedec062827e1cd0!2sCentro+Comercial+Santa+F%C3%A9!5e0!3m2!1ses!2sve!4v1447210628403"
+								width="350" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>
 						</div>
-						<div class="col-md-4"><p>salmonsalmonseafood@gmail.com</p>
+
+						<div class="col-md-4">
+							<p>salmonsalmonseafood@gmail.com</p>
+							<ul class="redesFoot">
+								<li><a href="http://facebook.com/trendloft">Facebook</a></li>
+								<li><a href="http://twitter.com/trendloft">Twitter</a></li>
+								<li><a href="http://instagram.com/trend_loft">Instagram</a></li>
+								<li><a href="http://pintrest.com/trendloft">Pinterest</a></li>
+							</ul>
 						</div>
+
 					</div>
 
 
