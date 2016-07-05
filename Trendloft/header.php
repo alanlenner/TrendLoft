@@ -3,7 +3,6 @@
 <head>
 	<meta charset="UTF-8">
 	<title>TrendLoft</title>
-	<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Roboto+Condensed|Montserrat|Open+Sans">
 
 	<link rel="stylesheet" href="resources/css/estilos.css">
 	<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
@@ -11,11 +10,10 @@
 	<script type="text/javascript" src="resources/js/scroll.js"></script>
 	<script type="text/javascript" src="resources/js/stock.js"></script>
 
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
 
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
-
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="resources/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="resources/bootstrap/js/bootstrap.min.js">
+	<link rel="stylesheet" type="text/css" href="resources/bootstrap/css/bootstrap-theme.min.css">
 
 </head>
 
