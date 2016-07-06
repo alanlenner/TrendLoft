@@ -19,4 +19,8 @@
 	background-repeat: no-repeat;
 	background-size: cover;
 	width: 100%;
+  animation: fadein 2s;
+    -moz-animation: fadein 2s; /* Firefox */
+    -webkit-animation: fadein 2s; /* Safari and Chrome */
+    -o-animation: fadein 2s; /* Opera */
 }
