@@ -12,12 +12,12 @@
   <link rel="stylesheet" href="resources/bootstrap/css/bootstrap.min.css">
 
 	<link rel="stylesheet" href="resources/css/estilos.css">
+  <link rel='stylesheet' type='text/css' href='resources/css/style.php'>
 
-
-	<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
-	<script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+	<script src="http://code.jquery.com/jquery-2.1.0.min.js"></script>
+	<script src="http://code.jquery.com/jquery-migrate-2.1.0.min.js"></script>
 	<script type="text/javascript" src="resources/js/scroll.js"></script>
-	<script type="text/javascript" src="resources/js/stock.js"></script>
+  <script type="text/javascript" src="resources/js/background.js"></script>
 
 </head>
 
@@ -26,7 +26,7 @@
 		<section>
 			<header>
 				<div class="wrapper">
-					<div class="logo"><img src="resources/images/logoTrendL.jpg" alt=""></div>
+					<div class="logo" id="prueba"><img src="resources/images/logoTrendL.jpg" alt=""></div>
 					<nav class="menu">
 						<a href="#home">Home</a>
 						<a href="#furniture">Furniture</a>

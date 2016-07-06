@@ -1,6 +1,6 @@
 <?php include('header.php');?>
 
-			<div class="home wrapper imagenInicio" id="home">
+			<div class="imagenInicio wrapper" id="home1">
 					<div class="titulo">
 						<h1>Comfort at First Sight...</h1>
 					</div>
