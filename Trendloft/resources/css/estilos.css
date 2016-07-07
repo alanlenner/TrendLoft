@@ -25,7 +25,7 @@ header{
 	/*background-color: rgba(0,0,0,0.75);*/
 	background-color: rgb(69, 53, 54);
 	/*background-color: #C63D0F;*/
-	z-index: 1;
+	z-index: 5;
 }
 
 .wrapper{
@@ -99,6 +99,22 @@ header nav.menu a:hover{
 	text-align: center;
 	margin-bottom: 300px;
 	font-family: 'Montserrat', serif;
+	position: absolute;
+	z-index: 4;
+}
+
+#imagenInicio {
+	width: 100%;
+}
+
+#imagenInicio img{
+	width:100%;
+	z-index:1;
+	position: absolute;
+}
+
+#imagenInicio img.active{
+	z-index:3;
 }
 
 #home1{
