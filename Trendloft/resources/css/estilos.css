@@ -215,6 +215,9 @@ footer{
 	width: 100%;
 	overflow: hidden;
 	background: rgb(69, 53, 54);
+	z-index: 2000;
+	position: absolute;
+	margin-top: 60%;
 }
 
 footer a{
