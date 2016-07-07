@@ -1,10 +1,16 @@
 <?php
-include('header.php');
+  include('header.php');
 
-$mysqli = new mysqli("127.0.0.1", "root", "", "trendloft", 3306);
-if ($mysqli->connect_errno) {
-  echo "Fallo al contenctar a MySQL: (" . $mysqli->connect_errno . ") " . $mysqli->connect_error;
-}
+  $mysqli = new mysqli("127.0.0.1", "root", "", "trendloft", 3306);
+    if ($mysqli->connect_errno) {
+      echo "Fallo al contenctar a MySQL: (" . $mysqli->connect_errno . ") " . $mysqli->connect_error;
+    }
+    else {
+      echo "PASO POR AQUI ";
+    }
+
+
+
 ?>
 <link rel = "stylesheet" href="resources/css/Login.css">
 <div class="wrapper imagenInicio">

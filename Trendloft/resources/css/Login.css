@@ -15,14 +15,20 @@ form.register{
   text-align: left;
   height: 450px;
 }
+form.addPic{
+    height: 500px;
+    width: 500px;
+    margin-left: 35%;
+    text-align: center;
+}
 
 input.btn-personalizado{
   color: white;
-  background:#D1785A;
+  background:rgb(69, 53, 54);
 }
 
 input.btn-personalizado:hover{
-  background:#F6AD94;
+    background:rgb(69, 30, 30);
   color: grey;
 }
 .error{

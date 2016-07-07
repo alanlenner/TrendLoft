@@ -23,7 +23,7 @@ header{
 	margin-bottom: 20px;
 	position: fixed;
 	/*background-color: rgba(0,0,0,0.75);*/
-	background-color: #FDF3E7;
+	background-color: rgb(69, 53, 54);
 	/*background-color: #C63D0F;*/
 	z-index: 1;
 }
@@ -75,7 +75,7 @@ header nav.social a:hover{
 
 header nav.menu a{
 	display: inline-block;;
-	color: #585858;
+	color: #f2f2f2;
 	text-decoration: none;
 	padding: 10px 20px;
 	line-height: normal;
@@ -87,7 +87,7 @@ header nav.menu a{
 }
 
 header nav.menu a:hover{
-	color: #C63D0F;
+	color: black;
 }
 
 .titulo{
@@ -198,7 +198,7 @@ h2 {
 footer{
 	width: 100%;
 	overflow: hidden;
-	background: rgba(198, 61, 15, 0.5);
+	background: rgb(69, 53, 54);
 }
 
 footer a{

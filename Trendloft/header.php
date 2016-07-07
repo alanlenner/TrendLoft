@@ -31,11 +31,11 @@
 						<a href="#lighting">Lighting</a>
 					</nav>
           <nav class="social">
-						<a href="http://facebook.com/trendloft"><img src="resources/images/LogoMakrFb.png" alt=""></a>
-						<a href="http://twitter.com/trendloft"><img src="resources/images/LogoMakrTw.png" alt=""></a>
-						<a href="http://instagram.com/trend_loft"><img src="resources/images/LogoMakrIg.png" alt=""></a>
-            <a href="http://pintrest.com/trendloft"><img src="resources/images/LogoMakrPin.png" alt=""></a>
-            <a href="mailto:info@trendloft.net"><img src="resources/images/LogoMakrMail.png" alt=""></a>
+						<a href="http://facebook.com/trendloft"><img src="resources/images/LogoMakrBeigeFb.png" alt=""></a>
+						<a href="http://twitter.com/trendloft"><img src="resources/images/LogoMakrBeigeTw.png" alt=""></a>
+						<a href="http://instagram.com/trend_loft"><img src="resources/images/LogoMakrBeigeIg.png" alt=""></a>
+            <a href="http://pintrest.com/trendloft"><img src="resources/images/LogoMakrBeigePin.png" alt=""></a>
+        <!--    <a href="mailto:info@trendloft.net"><img src="resources/images/LogoMakrBeigeMail.png" alt=""></a> -->
 					</nav>
 				</div>
 			</header>
