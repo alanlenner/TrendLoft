@@ -21,14 +21,7 @@
 
 <!-- CONEXION A BASE DE DATOS -->
 <?php
-  $user = 'root';
-  $password = 'root';
-  $db = 'trendloft';
-  $host = 'localhost';
-  $port = 8889;
-
-  $link = mysql_connect("$host:$port", $user, $password) or die('Could not connect to server.' );
-  $db_selected = mysql_select_db($db, $link)or die('Could not select database.');
+  include('conexion.php');
 
 /* CODIGO PARA HACER CONSULTAS A BD
 
@@ -63,7 +56,7 @@
 						<a href="http://twitter.com/trendloft"><img src="resources/images/LogoMakrBeigeTw.png" alt=""></a>
 						<a href="http://instagram.com/trend_loft"><img src="resources/images/LogoMakrBeigeIg.png" alt=""></a>
             <a href="http://pintrest.com/trendloft"><img src="resources/images/LogoMakrBeigePin.png" alt=""></a>
-        <!--    <a href="mailto:info@trendloft.net"><img src="resources/images/LogoMakrBeigeMail.png" alt=""></a> -->
+            <a href="mailto:info@trendloft.net"><img src="resources/images/LogoMakrBeigeMail.png" alt=""></a>
 					</nav>
 				</div>
 			</header>
