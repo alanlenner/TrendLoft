@@ -13,6 +13,7 @@
   <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Roboto+Condensed|Montserrat|Open+Sans">
 
   <link rel="stylesheet" href="resources/css/estilos.css">
+    <link rel="stylesheet" href="resources/css/Login.css">
   <link rel='stylesheet' type='text/css' href='resources/css/style.php'>
 	<script type="text/javascript" src="resources/js/scroll.js"></script>
   <script type="text/javascript" src="resources/js/background.js"></script>
@@ -42,7 +43,7 @@
 	<div class="overlay">
 		<section>
 			<header>
-				<div class="wrapper">
+				<div class="container wrapper">
 					<div class="logo" id="prueba"><img src="resources/images/logoTrendL.jpg" alt=""></div>
 					<nav class="menu">
 						<a href="#home">Home</a>
@@ -51,11 +52,12 @@
 						<a href="#lighting">Lighting</a>
 					</nav>
           <nav class="social">
-						<a href="http://facebook.com/trendloft"><img src="resources/images/LogoMakrBeigeFb.png" alt=""></a>
+            <a href="http://facebook.com/trendloft"><img src="resources/images/LogoMakrBeigeFb.png" alt=""></a>
 						<a href="http://twitter.com/trendloft"><img src="resources/images/LogoMakrBeigeTw.png" alt=""></a>
 						<a href="http://instagram.com/trend_loft"><img src="resources/images/LogoMakrBeigeIg.png" alt=""></a>
             <a href="http://pintrest.com/trendloft"><img src="resources/images/LogoMakrBeigePin.png" alt=""></a>
             <a href="mailto:info@trendloft.net"><img src="resources/images/LogoMakrBeigeMail.png" alt=""></a>
 					</nav>
 				</div>
+
 			</header>
