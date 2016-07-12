@@ -16,6 +16,7 @@
   <link rel='stylesheet' type='text/css' href='resources/css/style.php'>
 	<script type="text/javascript" src="resources/js/scroll.js"></script>
   <script type="text/javascript" src="resources/js/background.js"></script>
+  <script type="text/javascript" src="resources/js/galeria.js"></script>
 
 </head>
 
@@ -23,9 +24,8 @@
 <?php
   include('conexion.php');
 
-/* CODIGO PARA HACER CONSULTAS A BD
-
-
+/* CODIGO PARA HACER CONSULTAS A BD */
+/*
   $sql = "SELECT correo FROM usuarios";
   $res = mysql_query($sql, $link);
 
@@ -34,8 +34,7 @@
    echo $campo;
   }
 
-
-*/
+/**/
 ?>
 
 
