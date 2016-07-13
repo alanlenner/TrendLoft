@@ -118,6 +118,17 @@ header nav.menu a:hover{
 	z-index:3;
 }
 
+.galeria{
+	width: 100%;
+	max-width: inherit;
+	max-height: inherit;
+	margin: auto;
+	overflow: hidden;
+	margin-left: 0px;
+	padding-top: 5%;
+	position: absolute;
+	z-index: 4;
+}
 
 
 @keyframes fadein {

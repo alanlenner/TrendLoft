@@ -14,10 +14,35 @@
 
   <link rel="stylesheet" href="resources/css/estilos.css">
     <link rel="stylesheet" href="resources/css/Login.css">
+    <link rel="stylesheet" href="resources/css/galeria.css">
+  	<link rel="stylesheet" href="resources/css/elastislide.css">
   <link rel='stylesheet' type='text/css' href='resources/css/style.php'>
 	<script type="text/javascript" src="resources/js/scroll.js"></script>
   <script type="text/javascript" src="resources/js/background.js"></script>
   <script type="text/javascript" src="resources/js/galeria.js"></script>
+  <script type="text/javascript" src="resources/js/jquery.easing.1.3.js"></script>
+	<script type="text/javascript" src="resources/js/jquery.elastislide.js"></script>
+  <script type="text/javascript" src="resources/js/jquery.tmpl.min.js"></script>
+	<script type="text/javascript" src="resources/js/scroll.js"></script>
+  <noscript>
+		<style>
+			.es-carousel ul{
+				display:block;
+			}
+		</style>
+	</noscript>
+	<script id="img-wrapper-tmpl" type="text/x-jquery-tmpl">
+		<div class="rg-image-wrapper">
+			{{if itemsCount > 1}}
+				<div class="rg-image-nav">
+					<a href="#" class="rg-image-nav-prev">Previous Image</a>
+					<a href="#" class="rg-image-nav-next">Next Image</a>
+				</div>
+			{{/if}}
+			<div class="rg-image"></div>
+			<div class="rg-loading"></div>
+		</div>
+	</script>
 
 </head>
 
