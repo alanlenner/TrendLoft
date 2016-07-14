@@ -120,12 +120,13 @@ header nav.menu a:hover{
 
 .galeria{
 	width: 100%;
-	max-width: inherit;
 	max-height: inherit;
 	margin: auto;
 	overflow: hidden;
 	margin-left: 0px;
 	padding-top: 5%;
+	padding-left: 2%;
+	padding-right: 2%;
 	position: absolute;
 	z-index: 4;
 }
