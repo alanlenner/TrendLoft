@@ -1,11 +1,33 @@
 <?php include('header.php');
-      include('adminPhotoUpload.php');
 
-	$Name = $_POST['name'];
-  $Type= $_POST['type'];
-  $Price = $_POST['price'];
-  $Description = $_POST['description'];
+      $Name = $_POST['name'];
+      $Type= $_POST['type'];
+      $Price = $_POST['price'];
+      $Description = $_POST['description'];
 
+        if(isset($_FILES['ImageUpload'])){
+          //Si se selecciona una imagen a subir
+          $imageName = $_FILES['ImageUpload']['name'];
+          $imageTemp = $_FILES['ImageUpload']['tmp_name'];
+          $imageType = $_FILES['ImageUpload']['type'];
+
+          //Filtrar el nombre
+          $imageName = preg_replace("#[^a-z0-9.]#i", "", $imageName);
+
+          //Manejo de errores
+          if(!$imageTemp){
+            echo("You need to select a file to upload");
+          }else {
+            move_uploaded_file($imageTemp, "resources/images/galeria/Cabinets/$imageName");
+          }
+        }
+
+
+
+
+
+/* Inserción en Base de Datos */
+/*
   $sql = "INSERT INTO imagen VALUES ('$Name','$Description','$Path','$Type')";
   if ($stmt = mysqli_prepare($mysqli, $sql)) {
     mysqli_stmt_execute($stmt);
@@ -13,10 +35,7 @@
     mysqli_stmt_close($stmt);
   }
 
-
-
-
-
+*/
 ?>
 
 <div class="container">

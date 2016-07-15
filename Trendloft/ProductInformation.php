@@ -10,7 +10,7 @@
 
                 <div style="display:none" id="login-alert" class="alert alert-danger col-sm-12"></div>
 
-                <form id="addform" class="form-horizontal" role="form" action="upload.php">
+                <form id="addform" class="form-horizontal" role="form" method="POST" action="upload.php">
 
                   <div class="form-group">
                           <label for="name" class="col-md-3 control-label">Name</label>
