@@ -10,12 +10,15 @@
   /* PC JAVIER */
   /**/
   $user = 'root';
-  $password = 'root';
+  $password = '';
   $db = 'trendloft';
   $host = 'localhost';
-  $port = 8889;
+  $port = 3306;
   /**/
 
-  $link = mysql_connect("$host:$port", $user, $password) or die('Could not connect to server.' );
-  $db_selected = mysql_select_db($db, $link)or die('Could not select database.');
+  $mysqli = new mysqli($host, $user,$password, $db, $port);
+if ($mysqli->connect_errno) {
+  echo "Could not connect to server. (" . $mysqli->connect_errno . ") " . $mysqli->connect_error;
+}
+
 ?>

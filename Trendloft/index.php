@@ -8,7 +8,7 @@
 			<h1>Comfort at First Sight...</h1>
 		</div>
 		<div class="row">
-			<a href="LoginForm.php"><button type='button' class='btn btn-primary'>Login</button></a>
+			<a href="Login.php"><button type='button' class='btn btn-primary'>Login</button></a>
 		</div>
 
 	</div>

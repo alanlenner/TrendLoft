@@ -48,7 +48,7 @@
 
 <!-- CONEXION A BASE DE DATOS -->
 <?php
-  include('conexion.php');
+/*  include('conexion.php');
 
 /* CODIGO PARA HACER CONSULTAS A BD */
 /*
@@ -82,7 +82,13 @@
 						<a href="http://instagram.com/trend_loft"><img src="resources/images/LogoMakrBeigeIg.png" alt=""></a>
             <a href="http://pintrest.com/trendloft"><img src="resources/images/LogoMakrBeigePin.png" alt=""></a>
             <a href="mailto:info@trendloft.net"><img src="resources/images/LogoMakrBeigeMail.png" alt=""></a>
-					</nav>
+            <?php
+          /*  if(!isset($_SESSION['userid']))
+            {
+              echo '<a href="logout.php">Logout</a>';
+            }*/
+            ?>
+          </nav>
 				</div>
 
 			</header>
