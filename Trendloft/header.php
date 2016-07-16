@@ -65,30 +65,63 @@
 
 
 <body class="body">
-	<div class="overlay">
-		<section>
-			<header>
-				<div class="container wrapper">
-					<div class="logo" id="prueba"><img src="resources/images/logoTrendL.jpg" alt=""></div>
-					<nav class="menu">
-						<a href="#home">Home</a>
-						<a href="#furniture">Furniture</a>
-						<a href="#cabinet">Cabinets</a>
-						<a href="#lighting">Lighting</a>
-					</nav>
-          <nav class="social">
-            <a href="http://facebook.com/trendloft"><img src="resources/images/LogoMakrBeigeFb.png" alt=""></a>
-						<a href="http://twitter.com/trendloft"><img src="resources/images/LogoMakrBeigeTw.png" alt=""></a>
-						<a href="http://instagram.com/trend_loft"><img src="resources/images/LogoMakrBeigeIg.png" alt=""></a>
-            <a href="http://pintrest.com/trendloft"><img src="resources/images/LogoMakrBeigePin.png" alt=""></a>
-            <a href="mailto:info@trendloft.net"><img src="resources/images/LogoMakrBeigeMail.png" alt=""></a>
-            <?php
-          /*  if(!isset($_SESSION['userid']))
-            {
-              echo '<a href="logout.php">Logout</a>';
-            }*/
-            ?>
-          </nav>
-				</div>
+	<!--<div class="overlay">-->
+  <header>
+    <nav class="navbar navbar-default">
+      <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="index.php">	<div class="logo" id="prueba"><img src="resources/images/logoTrendL.jpg" alt=""></div></a>
+        </div>
 
-			</header>
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav">
+            <li class=""><a href="#">Home </a></li>
+            <li class="dropdown btn-group">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Furniture<span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="#">Dining Chairs</a></li>
+                <li><a href="#">Dining Tables</a></li>
+                <li><a href="#">Sofas</a></li>
+                <li><a href="#">Barstools</a></li>
+              </ul>
+            </li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Cabinets<span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="#">Dining Chairs</a></li>
+                <li><a href="#">Dining Tables</a></li>
+                <li><a href="#">Sofas</a></li>
+                <li><a href="#">Barstools</a></li>
+              </ul>
+            </li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Lighting<span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="#">Chandeliers</a></li>
+                <li><a href="#">Sconces</a></li>
+                <li><a href="#">Pendants</a></li>
+              </ul>
+            </li>
+          </ul>
+
+          <ul class="nav navbar-nav navbar-right">
+            <nav class="social">
+              <a href="http://facebook.com/trendloft"><img src="resources/images/LogoMakrBeigeFb.png" alt=""></a>
+              <a href="http://twitter.com/trendloft"><img src="resources/images/LogoMakrBeigeTw.png" alt=""></a>
+              <a href="http://instagram.com/trend_loft"><img src="resources/images/LogoMakrBeigeIg.png" alt=""></a>
+              <a href="http://pintrest.com/trendloft"><img src="resources/images/LogoMakrBeigePin.png" alt=""></a>
+              <a href="mailto:info@trendloft.net"><img src="resources/images/LogoMakrBeigeMail.png" alt=""></a>
+            </nav>
+          </ul>
+        </div><!-- /.navbar-collapse -->
+      </div><!-- /.container-fluid -->
+    </nav>
+  </header>
