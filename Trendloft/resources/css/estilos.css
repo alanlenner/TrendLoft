@@ -154,17 +154,28 @@ header nav.menu a:hover{
 
 .galeria{
 	width: 100%;
-	max-height: inherit;
+	max-height: 650px;
 	margin: auto;
 	overflow: hidden;
 	margin-left: 0px;
-	padding-top: 5%;
+	padding-top: 4%;
 	padding-left: 2%;
 	padding-right: 2%;
 	position: absolute;
 	z-index: 4;
 }
 
+.carousel-inner > .item{
+	width: 100%;
+	max-height: 600px;
+	margin: auto;
+}
+
+.carousel-inner > .item > img,
+.carousel-inner > .item > a > img {
+		width: 100%;
+		margin: auto;
+}
 
 @keyframes fadein {
     from {

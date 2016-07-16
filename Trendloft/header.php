@@ -7,6 +7,10 @@
 
   <title>TrendLoft</title>
 
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
   <link rel="stylesheet" type='text/css' href="vendors/bootstrap/css/bootstrap.min.css">
   <script src="vendors/jquery/jquery-3.0.0.min.js"></script> <!-- NO FUNCIONA! -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
