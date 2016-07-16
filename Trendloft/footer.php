@@ -47,8 +47,6 @@
     </div>
   </div>
 </footer>
-
-</section>
 </div>
 
 
