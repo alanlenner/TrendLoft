@@ -26,38 +26,37 @@
     <!-- Wrapper for slides -->
     <div class="carousel-inner" role="listbox">
 
-      <div class="item active">
-        <img src="resources/images/galeria/Cabinets/foto1.jpg" alt="Chania" width="460" height="345">
-        <div class="carousel-caption">
-          <h3>Chania</h3>
-          <p>The atmosphere in Chania has a touch of Florence and Venice.</p>
-        </div>
-      </div>
+      <?php
+				$imageDisplay = "";
+				$images = scandir("resources/images/galeria/Cabinets");
+				$ignore = array(".","..");
+				$i = '1';
 
-      <div class="item">
-        <img src="resources/images/galeria/Cabinets/foto2.jpg" alt="Chania" width="460" height="345">
-        <div class="carousel-caption">
-          <h3>Chania</h3>
-          <p>The atmosphere in Chania has a touch of Florence and Venice.</p>
-        </div>
-      </div>
+				$titulo = "Titulo"; //Consulta SQL
+				$descripcion = "Descripcion"; //Consulta SQL
+				$precio = "Precio"; //Consulta SQL
 
-      <div class="item">
-        <img src="resources/images/galeria/Cabinets/foto3.jpg" alt="Flower" width="460" height="345">
-        <div class="carousel-caption">
-          <h3>Flowers</h3>
-          <p>Beatiful flowers in Kolymbari, Crete.</p>
-        </div>
-      </div>
+				foreach ($images as $file) {
+					if (!in_array($file, $ignore)){
 
-      <div class="item">
-        <img src="resources/images/galeria/foto4.jpg" alt="Flower" width="460" height="345">
-        <div class="carousel-caption">
-          <h3>Flowers</h3>
-          <p>Beatiful flowers in Kolymbari, Crete.</p>
-        </div>
-      </div>
+						if ($i > 1){
+							$imageDisplay .= '<div class="item">';
+						} else {
+							$imageDisplay .= '<div class="item active">';
+						}
 
+						$imageDisplay .= '<img src="resources/images/galeria/Cabinets/'. $file .'" alt="Chania" width="460" height="345">';
+
+						$imageDisplay .= '<div class="carousel-caption">';
+
+						$imageDisplay .= '<h3>'. $titulo.$i .'</h3><p>'. $descripcion.$i .'</p></div></div>';
+
+						$i++;
+					}
+				}
+
+				echo ($imageDisplay);
+			 ?>
     </div>
 
     <!-- Left and right controls -->
