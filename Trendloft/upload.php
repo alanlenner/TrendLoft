@@ -18,24 +18,21 @@
           if(!$imageTemp){
             echo("You need to select a file to upload");
           }else {
-            move_uploaded_file($imageTemp, "resources/images/galeria/Cabinets/$imageName");
+            move_uploaded_file($imageTemp, "resources/images/galeria/$Type/$imageName");
+
+            /* Inserción en Base de Datos */
+            include('conexion.php');
+            $sql = "INSERT INTO imagen (nombre,descripcion,tipo,precio)
+                    VALUES ('$Name','$Description','$Type','$Price')";
+
+            if ($stmt = mysqli_prepare($mysqli, $sql)) {
+              mysqli_stmt_execute($stmt);
+              $error_sql = mysqli_stmt_error($stmt);
+              mysqli_stmt_close($stmt);
+            }
+            mysqli_close($mysqli);
           }
         }
-
-
-
-
-
-/* Inserción en Base de Datos */
-/*
-  $sql = "INSERT INTO imagen VALUES ('$Name','$Description','$Path','$Type')";
-  if ($stmt = mysqli_prepare($mysqli, $sql)) {
-    mysqli_stmt_execute($stmt);
-    $error_sql = mysqli_stmt_error($stmt);
-    mysqli_stmt_close($stmt);
-  }
-
-*/
 ?>
 
 <div class="container">
@@ -44,33 +41,33 @@
       <div class="panel-heading">
         <div class="panel-title">Upload a Picture</div>
       </div>
-
       <div style="padding-top:30px" class="panel-body" >
-
         <div style="display:none" id="login-alert" class="alert alert-danger col-sm-12"></div>
+        <div class="">
 
-        <form id="addform" class="form-horizontal" role="form">
+          <!-- Esto es solo para propositos de prueba, eliminar al completar la implementacion -->
+          <!-- Esto es solo para propositos de prueba, eliminar al completar la implementacion -->
+          <h3>
+            <?php
+              if (isset($Name)){
+                echo $Name.'<hr>';
+                echo $Type.'<hr>';
+                echo $Price.'<hr>';
+                echo $Description.'<hr>';
+              } else {
+                echo 'No hay nada pana... :(';
+              }
 
-          <div class="form-group">
-                  <label for="name" class="col-md-3 control-label">Picture</label>
-                  <div class="col-md-9">
-                        <input type="file" name="ImageUpload">
-                  </div>
-            </div>
+            ?>
+          </h3>
+          <!-- Esto es solo para propositos de prueba, eliminar al completar la implementacion -->
+          <!-- Esto es solo para propositos de prueba, eliminar al completar la implementacion -->
 
-              <div class="form-group">
-                  <!-- Button -->
-                  <div class="col-md-offset-3 col-md-9">
-                        <input type="submit" class="btn btn-info" name="name" value="Upload">
-                  </div>
-              </div>
-
-            </form>
-
-
-
+        </div>
       </div>
     </div>
   </div>
 </div>
+
+
 <?php include('footer.php');?>

@@ -1,16 +1,16 @@
 <?php include('header.php');
 
-	//$tipo = 'Cabinets';
+	$tipo = 'Cabinets';
 	//$tipo = 'Chandeliers';
 	//$tipo = 'DiningChairs';
 	//$tipo = 'DiningTables';
 	//$tipo = 'Pendants';
-	$tipo = 'Sconces'; //De todas es la que se ve mas limpia debido a que tiene el mismo tamaño
-	//$tipo = 'Sofas'; //Tiene todas las fotos (12 imagenes)
+	//$tipo = 'Sconces';
+	//$tipo = 'Sofas';
 
-	$titulo = "Titulo"; //Consulta SQL
-	$descripcion = "Descripcion"; //Consulta SQL
-	$precio = "Precio"; //Consulta SQL
+	$titulo = "Titulo"; //Consultar por SQL
+	$descripcion = "Descripcion"; //Consultar por SQL
+	$precio = "Precio"; //Consultar por SQL
 
 ?>
 
