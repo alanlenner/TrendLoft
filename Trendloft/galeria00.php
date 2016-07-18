@@ -1,17 +1,12 @@
 <?php include('header.php');
 
-	$tipo = 'Cabinets';
+	//$tipo = 'Cabinets';
 	//$tipo = 'Chandeliers';
-	//$tipo = 'DiningChairs';
+	$tipo = 'DiningChairs';
 	//$tipo = 'DiningTables';
 	//$tipo = 'Pendants';
 	//$tipo = 'Sconces';
 	//$tipo = 'Sofas';
-
-	$titulo = "Titulo"; //Consultar por SQL
-	$descripcion = "Descripcion"; //Consultar por SQL
-	$precio = "Precio"; //Consultar por SQL
-
 ?>
 
 <script type="text/javascript">
@@ -64,10 +59,20 @@
 							$imageDisplay .= '<div class="item active">';
 						}
 
-						//Borrar $i al implementar BD
+						include('conexion.php');
+						$sql = "SELECT * FROM imagen WHERE tipo = '$tipo' AND imageName = '$file'";
+						$result = mysqli_query($mysqli, $sql);
+						$row = mysqli_fetch_array($result);
+
+						$titulo = $row["nombre"];
+						$descripcion = $row["descripcion"];
+						$precio = $row["precio"];
+
+						mysqli_close($mysqli);
+
 						//En el h2 cambiar el display a 'block' si hay una sesion de usuario activa.
 						$imageDisplay .= '<img src="resources/images/galeria/'. $tipo .'/'. $file .'" alt="Chania" width="460"
-						height="345"><div class="carousel-caption"><h3>'. $titulo.$i .'</h3><p>'. $descripcion.$i .'</p>
+						height="345"><div class="carousel-caption"><h3>'. $titulo .'</h3><p>'. $descripcion .'</p>
 						<h2 style="display:none">'. $precio .'$</h2></div></div>';
 
 						$i++;

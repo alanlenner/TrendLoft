@@ -1,7 +1,7 @@
 <?php include('header.php');
 
       $Name = $_POST['name'];
-      $Type= $_POST['type'];
+      $Type = str_replace(' ', '', $_POST['type']);
       $Price = $_POST['price'];
       $Description = $_POST['description'];
 
@@ -22,8 +22,8 @@
 
             /* Inserción en Base de Datos */
             include('conexion.php');
-            $sql = "INSERT INTO imagen (nombre,descripcion,tipo,precio)
-                    VALUES ('$Name','$Description','$Type','$Price')";
+            $sql = "INSERT INTO imagen (nombre,descripcion,tipo,precio,imageName)
+                    VALUES ('$Name','$Description','$Type','$Price','$imageName')";
 
             if ($stmt = mysqli_prepare($mysqli, $sql)) {
               mysqli_stmt_execute($stmt);
@@ -62,6 +62,13 @@
           </h3>
           <!-- Esto es solo para propositos de prueba, eliminar al completar la implementacion -->
           <!-- Esto es solo para propositos de prueba, eliminar al completar la implementacion -->
+
+          <!-- Button -->
+          <div class="form-group">
+              <div class="col-md-offset-3 col-md-9">
+                <a href="productinformation.php" type="button" class="btn btn-info">Finish</a>
+              </div>
+          </div>
 
         </div>
       </div>
