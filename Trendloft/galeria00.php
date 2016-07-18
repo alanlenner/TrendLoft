@@ -1,8 +1,8 @@
 <?php include('header.php');
 
 	//$tipo = 'Cabinets';
-	//$tipo = 'Chandeliers';
-	$tipo = 'DiningChairs';
+	$tipo = 'Chandeliers';
+	//$tipo = 'DiningChairs';
 	//$tipo = 'DiningTables';
 	//$tipo = 'Pendants';
 	//$tipo = 'Sconces';
@@ -73,7 +73,7 @@
 						//En el h2 cambiar el display a 'block' si hay una sesion de usuario activa.
 						$imageDisplay .= '<img src="resources/images/galeria/'. $tipo .'/'. $file .'" alt="Chania" width="460"
 						height="345"><div class="carousel-caption"><h3>'. $titulo .'</h3><p>'. $descripcion .'</p>
-						<h2 style="display:none">'. $precio .'$</h2></div></div>';
+						<h2 style="display:block">'. $precio .'$</h2></div></div>';
 
 						$i++;
 					}
