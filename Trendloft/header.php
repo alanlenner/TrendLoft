@@ -28,6 +28,10 @@
 	<script type="text/javascript" src="resources/js/jquery.elastislide.js"></script>
   <script type="text/javascript" src="resources/js/jquery.tmpl.min.js"></script>
 	<script type="text/javascript" src="resources/js/scroll.js"></script>
+  <script type="text/javascript" src="vendors/bootstrap/js/bootstrap.js"></script>
+  <script type="text/javascript" src="vendors/bootstrap/js/jquery.js"></script>
+  <script type="text/javascript" src="vendors/bootstrap/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="vendors/bootstrap/js/npm.js"></script>
   <noscript>
 		<style>
 			.es-carousel ul{
@@ -81,15 +85,15 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="index.php">	<div class="logo" id="prueba"><img src="resources/images/logoTrendL.jpg" alt=""></div></a>
+          <a class="navbar-brand" href="index.php"><div class="logo" id="prueba"><img src="resources/images/logoTrendL.jpg" alt=""></div></a>
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
           <ul class="nav navbar-nav">
             <li class=""><a href="#">Home </a></li>
-            <li class="dropdown btn-group">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Furniture<span class="caret"></span></a>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"  >Furniture<span class="caret"></span></a>
               <ul class="dropdown-menu">
                 <li><a href="#">Dining Chairs</a></li>
                 <li><a href="#">Dining Tables</a></li>
@@ -98,7 +102,7 @@
               </ul>
             </li>
             <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Cabinets<span class="caret"></span></a>
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" >Cabinets<span class="caret"></span></a>
               <ul class="dropdown-menu">
                 <li><a href="#">Dining Chairs</a></li>
                 <li><a href="#">Dining Tables</a></li>
@@ -107,7 +111,7 @@
               </ul>
             </li>
             <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Lighting<span class="caret"></span></a>
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button">Lighting<span class="caret"></span></a>
               <ul class="dropdown-menu">
                 <li><a href="#">Chandeliers</a></li>
                 <li><a href="#">Sconces</a></li>
