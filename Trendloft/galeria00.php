@@ -2,8 +2,8 @@
   session_start();
 	include('header.php');
 
-	$tipo = 'Cabinets';
-	//$tipo = 'Chandeliers';
+//	$tipo = 'Cabinets';
+	$tipo = 'Chandeliers';
 	//$tipo = 'DiningChairs';
 	//$tipo = 'DiningTables';
 	//$tipo = 'Pendants';
