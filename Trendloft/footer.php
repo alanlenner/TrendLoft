@@ -29,21 +29,54 @@
       </div>
 
       <div class="col-xs-4">
-        <p>info@trendloft.net</p>
-        <div class ="col-xs-6">
-          <ul class="redesFoot">
-            <li><a href="http://facebook.com/trendloft"><img src="resources/images/LogoMakrBeigeFb.png" alt=""></a></li>
-            <li><a href="http://twitter.com/trendloft"><img src="resources/images/LogoMakrBeigeTw.png" alt=""></a></li>
-          </ul>
+        <div class="row">
+            <div class="col-xs-4">
+                  <p>info@trendloft.net</p>
+            </div>
         </div>
-
-        <div class="col-xs-6">
-          <ul class="redesFoot">
-            <li><a href="http://instagram.com/trend_loft"><img src="resources/images/LogoMakrBeigeIg.png" alt=""></a></li>
-            <li><a href="http://pintrest.com/trendloft"><img src="resources/images/LogoMakrBeigePin.png" alt=""></a></li>
+        <div class="row">
+          <div class ="col-xs-6">
+            <ul class="redesFoot">
+            <li><a href="http://facebook.com/trendloft"><img src="resources/images/LogoMakrBeigeFb.png" alt=""></a></li>
           </ul>
+          </div>
+          <div class ="col-xs-6">
+            <ul class="redesFoot">
+              <li><a href="http://twitter.com/trendloft"><img src="resources/images/LogoMakrBeigeTw.png" alt=""></a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="row">
+          <div class ="col-xs-6">
+            <ul class="redesFoot">
+              <li><a href="http://instagram.com/trend_loft"><img src="resources/images/LogoMakrBeigeIg.png" alt=""></a></li>
+              </ul>
+          </div>
+          <div class ="col-xs-6">
+            <ul class="redesFoot">
+                <li><a href="http://pintrest.com/trendloft"><img src="resources/images/LogoMakrBeigePin.png" alt=""></a></li>
+            </ul>
+          </div>
         </div>
       </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-12">
+      <?php
+        if(isset($_SESSION['logueado']) and $_SESSION['logueado']){
+           $nombre = $_SESSION['userid'];
+           echo "  <div class=''>
+               <p>
+                 Welcome $nombre!
+               </p>
+             </div>
+             <a href='Logout.php'>Logout</a>
+             ";
+        }
+         ?>
+      </div>
+
+
     </div>
   </div>
 </footer>

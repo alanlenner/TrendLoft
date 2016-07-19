@@ -92,6 +92,7 @@
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
           <ul class="nav navbar-nav">
             <li class=""><a href="#">Home </a></li>
+            <li class=""><a href="#">Cabinets </a></li>
             <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"  >Furniture<span class="caret"></span></a>
               <ul class="dropdown-menu">
@@ -101,15 +102,7 @@
                 <li><a href="#">Barstools</a></li>
               </ul>
             </li>
-            <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" >Cabinets<span class="caret"></span></a>
-              <ul class="dropdown-menu">
-                <li><a href="#">Dining Chairs</a></li>
-                <li><a href="#">Dining Tables</a></li>
-                <li><a href="#">Sofas</a></li>
-                <li><a href="#">Barstools</a></li>
-              </ul>
-            </li>
+
             <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button">Lighting<span class="caret"></span></a>
               <ul class="dropdown-menu">
@@ -120,6 +113,7 @@
             </li>
           </ul>
 
+
           <ul class="nav navbar-nav navbar-right">
             <nav class="social">
               <a href="http://facebook.com/trendloft"><img src="resources/images/LogoMakrBeigeFb.png" alt=""></a>
@@ -128,6 +122,7 @@
               <a href="http://pintrest.com/trendloft"><img src="resources/images/LogoMakrBeigePin.png" alt=""></a>
               <a href="mailto:info@trendloft.net"><img src="resources/images/LogoMakrBeigeMail.png" alt=""></a>
             </nav>
+
           </ul>
         </div><!-- /.navbar-collapse -->
       </div><!-- /.container-fluid -->

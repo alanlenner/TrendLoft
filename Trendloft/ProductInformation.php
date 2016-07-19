@@ -1,6 +1,15 @@
-<?php include('header.php');?>
+<?php
+session_start();
+ include('header.php');
+
+
+if(isset($_SESSION['logueado']) and $_SESSION['logueado'] and $_SESSION['userid']== 'admin'){
+  echo '
+
 <div class="container">
-  <div id="addbox" style="margin-top:15%;" class="mainbox col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">
+<div class="row">
+<div class="col-sm-12">
+  <div id="addbox" style="margin-top:10%;" class="mainbox col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">
       <div class="panel panel-info" >
               <div class="panel-heading">
                   <div class="panel-title">Add a new Product</div>
@@ -67,4 +76,17 @@
               </div>
   </div>
 </div>
-<?php include('footer.php');?>
+</div>
+</div>
+
+';
+}
+else {
+  echo '
+  <div style="margin-top:20%;margin-left:40%; position: absolute;" class="">
+    <div  class="alert alert-danger container-fluid">
+    <strong>ERROR!</strong> You cannot access this site.
+  </div>
+  </div>';
+}
+include('footer.php');?>

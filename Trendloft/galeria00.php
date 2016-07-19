@@ -1,4 +1,6 @@
-<?php include('header.php');
+<?php
+  session_start();
+include('header.php');
 
 	//$tipo = 'Cabinets';
 	//$tipo = 'Chandeliers';
@@ -71,11 +73,18 @@
 						mysqli_close($mysqli);
 
 						//En el h2 cambiar el display a 'block' si hay una sesion de usuario activa.
-						$imageDisplay .= '<img src="resources/images/galeria/'. $tipo .'/'. $file .'" alt="Chania" width="460"
-						height="345"><div class="carousel-caption"><h3>'. $titulo .'</h3><p>'. $descripcion .'</p>
-						<h2 style="display:none">'. $precio .'$</h2></div></div>';
 
-						$i++;
+			        if(isset($_SESSION['logueado']) and $_SESSION['logueado']){
+								$imageDisplay .= '<img src="resources/images/galeria/'. $tipo .'/'. $file .'" alt="Chania" width="460"
+							 height="345"><div class="carousel-caption"><h3>'. $titulo .'</h3><p>'. $descripcion .'</p>
+							 <h2  style="display:block;">Price: '. $precio .'$</h2></div></div>';
+			        }
+							else{
+								$imageDisplay .= '<img src="resources/images/galeria/'. $tipo .'/'. $file .'" alt="Chania" width="460"
+								height="345"><div class="carousel-caption"><h3>'. $titulo .'</h3><p>'. $descripcion .'</p>
+								<h4 >Price: <a class="loginplz" href="login.php">Log in!</a></h4></div></div>';
+							}
+
 					}
 				}
 				echo ($imageDisplay);

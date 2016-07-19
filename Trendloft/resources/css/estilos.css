@@ -19,7 +19,7 @@ header{
 	/*background-color: rgba(0,0,0,0.75);*/
 	/*background-color: rgb(69, 53, 54);
 	/*background-color: #C63D0F;*/
-	z-index: 5;
+	z-index: 2000;
 }
 .navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
 color: #000;  /*Sets the text hover color on navbar*/
@@ -225,7 +225,14 @@ h2 {
 	color: #fff;
 	font-family: 'Montserrat', serif;
 }
-
+.loginplz{
+	display: inline-block;
+	color: white;
+	text-decoration: none;
+}
+.loginplz:hover{
+	color:blue;
+}
 footer{
 	width: 100%;
 	overflow: hidden;
@@ -254,6 +261,12 @@ footer ul.redesFoot li a img{
 	max-width: 70px;
 	max-height: 70px;
 	line-height: 70px;
+}
+footer ul.redesFoot li a:hover{
+	width: auto;
+	max-width: 70px;
+	max-height: 70px;
+	line-height: 73px;
 }
 
 footer ul.redesFoot li a{

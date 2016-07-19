@@ -3,7 +3,7 @@
   include('header.php'); //session_start() crea una sesión para ser usada mediante una petición GET o POST, o pasado por una cookie
   //include_once "conexion.php"; //es la sentencia que usaremos para incluir el archivo de conexión a la base de datos que creamos anteriormente.	  //
   /*Función verificar_login() --> Vamos a crear una función llamada verificar_login, esta se encargara de hacer una consulta a la base de datos para saber si el usuario ingresado es correcto o no.*/
-  include('loginForm.php');
+
 
 function verificar_login($usuario, $contrasena){
   include('conexion.php');
@@ -24,7 +24,7 @@ mysqli_close($mysqli);
 function insertaruser($usuario, $contrasena, $publicidad)
 {
   include('conexion.php');
-  $sql = "INSERT INTO usuarios VALUES ('$usuario','$contrasena','$publicidad')";
+  $sql = "INSERT INTO usuarios (correo,password,publicidad) VALUES ('$usuario','$contrasena','$publicidad')";
   if ($stmt = mysqli_prepare($mysqli, $sql)) {
     mysqli_stmt_execute($stmt);
     $error_sql = mysqli_stmt_error($stmt);
@@ -38,16 +38,21 @@ function insertaruser($usuario, $contrasena, $publicidad)
 
 if(!isset($_SESSION['userid'])) //para saber si existe o no ya la variable de sesión que se va a crear cuando el usuario se logee
 {
+  include('loginForm.php');
     if(isset($_POST['loginbutton'])) //Si la primera condición no pasa, haremos otra preguntando si el boton de login fue presionado
     {
         if(verificar_login($_POST['username'],$_POST['password']) == 1) //Si el boton fue presionado llamamos a la función verificar_login() dentro de otra condición preguntando si resulta verdadero y le pasamos los valores ingresados como parámetros.
         {
             /*Si el login fue correcto, registramos la variable de sesión y al mismo tiempo refrescamos la pagina index.php.*/
             $_SESSION['userid'] = $_POST['username'];
-            $_SESSION['estado'] = 'Autenticado';
+            $User= $_SESSION['userid'];
+            $_SESSION['logueado'] = true;
+
             echo '<div class="alert alert-success">
-            <strong>Success!</strong> You logged in.
+            <strong>Success!</strong> You logged in as: '.$User.'
             </div>';
+
+
         }
         else
         {
@@ -70,13 +75,20 @@ if(!isset($_SESSION['userid'])) //para saber si existe o no ya la variable de se
         else {
           insertarUser($Email,$Pwd,'No');
         }
+        echo '<div class="alert alert-success">
+        <strong>Success!</strong> You registered in as: '.$Email.' awaiting email confirmation
+        </div>';
     }
   } else {
     // Si la variable de sesión ‘userid’ ya existe, que muestre el mensaje de saludo.
-    echo '<div class="alert alert-success">
-    <strong>Success!</strong> You are already logged in.
+    $Usuario =   $_SESSION['userid'];
+    echo '
+    <div style="margin-top:30%;margin-left:40%; position: absolute;" class="">
+      <div  class="alert alert-success container-fluid">
+      <strong>Success!</strong> You are already logged in.
     </div>
-    <a href="Logout.php">Logout</a>';
+    </div>'
+    ;
   }
 
  include('footer.php');?>
