@@ -28,10 +28,12 @@
 	<script type="text/javascript" src="resources/js/jquery.elastislide.js"></script>
   <script type="text/javascript" src="resources/js/jquery.tmpl.min.js"></script>
 	<script type="text/javascript" src="resources/js/scroll.js"></script>
+<!--
   <script type="text/javascript" src="vendors/bootstrap/js/bootstrap.js"></script>
   <script type="text/javascript" src="vendors/bootstrap/js/jquery.js"></script>
   <script type="text/javascript" src="vendors/bootstrap/js/bootstrap.min.js"></script>
   <script type="text/javascript" src="vendors/bootstrap/js/npm.js"></script>
+-->
   <noscript>
 		<style>
 			.es-carousel ul{
