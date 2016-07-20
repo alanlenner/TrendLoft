@@ -2,8 +2,15 @@
   session_start();
 	include('header.php');
 
-//	$tipo = 'Cabinets';
-	$tipo = 'Chandeliers';
+  if (isset($_GET['tipo']))
+  {
+    $tipo = ($_GET['tipo']);
+  }
+
+	//$tipo = 'Cabinets';
+	//$tipo = 'Chandeliers';
+	//	$tipo = 'Cabinets';
+	//$tipo = 'Chandeliers';
 	//$tipo = 'DiningChairs';
 	//$tipo = 'DiningTables';
 	//$tipo = 'Pendants';
@@ -72,7 +79,7 @@
 
 			        if(isset($_SESSION['logueado']) and $_SESSION['logueado']){
 								$imageDisplay .= '<img src="resources/images/galeria/'. $tipo .'/'. $file .'" alt="Chania" width="460"
-							 height="345"><div class="carousel-caption"><h3>'. $titulo .'</h3><p>'. $descripcion .'</p>
+							 height="345"><div class="carousel-caption"><h3>'. $titulo .'</h3> <p>'. $descripcion .'</p>
 							 <h2 style="display:block;">Price: '. $precio .'$</h2></div></div>';
 			        }
 							else{
