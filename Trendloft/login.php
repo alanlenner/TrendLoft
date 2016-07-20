@@ -24,13 +24,45 @@ mysqli_close($mysqli);
 function insertaruser($usuario, $contrasena, $publicidad)
 {
   include('conexion.php');
-  $sql = "INSERT INTO usuarios (correo,password,publicidad) VALUES ('$usuario','$contrasena','$publicidad')";
-  if ($stmt = mysqli_prepare($mysqli, $sql)) {
-    mysqli_stmt_execute($stmt);
-    $error_sql = mysqli_stmt_error($stmt);
-    mysqli_stmt_close($stmt);
-  }
+  $codigoverificacion = rand(000000000,999999999);
+    $sql = "INSERT INTO usuario (correo,password,publicidad,code) VALUES ('$usuario','$contrasena','$publicidad',$codigoverificacion)";
+    if ($stmt = mysqli_prepare($mysqli, $sql)) {
+      mysqli_stmt_execute($stmt);
+      $error_sql = mysqli_stmt_error($stmt);
+      mysqli_stmt_close($stmt);
+    }
   mysqli_close($mysqli);
+// Varios destinatarios
+/*$para  = $usuario; // atención a la coma
+// título
+$título = 'Trendloft Account Confirmation';
+// mensaje
+$mensaje = '
+<html>
+<head>
+<title>Email Confirmation</title>
+</head>
+<body>
+<h1>Thanks for suscribing to Trendloft!</h1>
+<h3>Click the link below to confirm your email</h3>
+<a href="www.Trendloft.com/verification.php?code="'.$$codigoverificacion.'></a>
+
+</body>
+</html>
+';
+
+// Para enviar un correo HTML, debe establecerse la cabecera Content-type
+$cabeceras  = 'MIME-Version: 1.0' . "\r\n";
+$cabeceras .= 'Content-type: text/html; charset=iso-8859-1' . "\r\n";
+
+// Cabeceras adicionales
+$cabeceras .= 'To:'.$usuario. "\r\n";
+$cabeceras .= 'From: Confirmation <noreturn@Trendloft.com>' . "\r\n";
+
+
+// Enviarlo
+mail($para, $título, $mensaje, $cabeceras);
+*/
 }
 
 
@@ -66,10 +98,9 @@ if(!isset($_SESSION['userid'])) //para saber si existe o no ya la variable de se
     {
         $Email=$_POST['email'];
         $Pwd= $_POST['passwd'];
-        $News=$_POST['news'];
-
-        if ($News== 1)
+        if (isset($_POST['news']))
         {
+          $News=$_POST['news'];
           insertarUser($Email,$Pwd,'Si');
         }
         else {

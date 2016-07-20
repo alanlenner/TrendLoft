@@ -9,6 +9,8 @@
 
 	//$tipo = 'Cabinets';
 	//$tipo = 'Chandeliers';
+	//	$tipo = 'Cabinets';
+	//$tipo = 'Chandeliers';
 	//$tipo = 'DiningChairs';
 	//$tipo = 'DiningTables';
 	//$tipo = 'Pendants';
