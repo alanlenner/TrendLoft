@@ -75,7 +75,7 @@
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
           <ul class="nav navbar-nav">
-            <li class=""><a href="#">Home </a></li>
+            <li class=""><a href="index.php">Home </a></li>
             <li class=""><a href="galeria00.php?tipo=Cabinets">Cabinets </a></li>
             <li class="desplegable"><a href="#" class="despeglable-opcion">Furniture</a>
               <div>
@@ -83,18 +83,18 @@
                   <li><a href="galeria00.php?tipo=DiningChairs">Dining Chairs</a></li>
                   <li><a href="galeria00.php?tipo=DiningTables">Dining Tables</a></li>
                   <li><a href="galeria00.php?tipo=Sofas">Sofas</a></li>
-                  <li><a href="#">Barstools</a></li>
+                  <li><a href="galeria00.php?tipo=Barstools">Barstools</a></li>
                 </ul>
               </div>
             </li>
-
-            <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button">Lighting<span class="caret"></span></a>
-              <ul class="dropdown-menu">
-                <li><a href="galeria00.php?tipo=Chandeliers">Chandeliers</a></li>
-                <li><a href="galeria00.php?tipo=Sconces">Sconces</a></li>
-                <li><a href="galeria00.php?tipo=Pendants">Pendants</a></li>
-              </ul>
+            <li class="desplegable"><a href="#" class="despeglable-opcion">Furniture</a>
+              <div>
+                <ul class="desplegable">
+                  <li><a href="galeria00.php?tipo=Chandeliers">Chandeliers</a></li>
+                  <li><a href="galeria00.php?tipo=Sconces">Sconces</a></li>
+                  <li><a href="galeria00.php?tipo=Pendants">Pendants</a></li>
+                </ul>
+              </div>
             </li>
           </ul>
 

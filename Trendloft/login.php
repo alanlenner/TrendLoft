@@ -7,7 +7,7 @@
 
 function verificar_login($usuario, $contrasena){
   include('conexion.php');
-  $sql = "SELECT correo, password FROM usuarios";
+  $sql = "SELECT correo, password FROM usuario";
     $result = mysqli_query($mysqli, $sql);
     while ($row = mysqli_fetch_array($result)) {
       if (($usuario == $row['correo']) AND ($contrasena == $row['password']))
