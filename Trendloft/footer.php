@@ -73,6 +73,10 @@
              <a href='Logout.php'>Logout</a>
              ";
         }
+        else{
+            echo "<a href='Login.php'>Log In</a>";
+        }
+
          ?>
       </div>
 

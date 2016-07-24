@@ -87,7 +87,7 @@
                 </ul>
               </div>
             </li>
-            <li class="desplegable"><a href="#" class="despeglable-opcion">Furniture</a>
+            <li class="desplegable"><a href="#" class="despeglable-opcion">Lighting</a>
               <div>
                 <ul class="desplegable">
                   <li><a href="galeria00.php?tipo=Chandeliers">Chandeliers</a></li>
