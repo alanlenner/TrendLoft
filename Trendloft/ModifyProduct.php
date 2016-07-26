@@ -4,8 +4,7 @@ session_start();
 
 
 if(isset($_SESSION['logueado']) and $_SESSION['logueado'] and $_SESSION['userid']== 'admin'){
-
-
+?>
 <div class="container">
 <div class="row">
 <div class="col-sm-12">
@@ -20,62 +19,25 @@ if(isset($_SESSION['logueado']) and $_SESSION['logueado'] and $_SESSION['userid'
                   <div style="display:none" id="login-alert" class="alert alert-danger col-sm-12"></div>
 
                   <form id="addform" class="form-horizontal" role="form" method="POST" action="upload.php" enctype="multipart/form-data">
-                  <!-- Type -->
-                  <div class="form-group">
-                    <label class="col-md-3 control-label" for="sel1">Type</label>
-                    <div class="col-md-9">
-                      <select class="form-control" name ="type" id="type">
-                        <option>Dining Chairs</option>
-                        <option>Dining Tables</option>
-                        <option>Sofas</option>
-                        <option>Chandeliers</option>
-                        <option>Sconces</option>
-                        <option>Pendants</option>
-                        <option>Cabinets</option>
-                      </select>
-                    </div>
-                  </div>
                     <!-- Name -->
                     <div class="form-group">
                             <label for="name" class="col-md-3 control-label">Name</label>
                             <div class="col-md-9">
                             <select class="form-control" name="codigo2" id="codigo2">
+            <?php
+                 $sql = "SELECT nombre FROM imagen";
+               $result = mysqli_query($mysqli, $sql);
+               while ($row = mysqli_fetch_array($result)) {
+               $campo = $row["nombre"];
 
-      <?php
-        $sql = "SELECT nombre FROM imagen";
-        $result = mysqli_query($mysqli, $sql);
-        while ($row = mysqli_fetch_array($result)) {
-         $campo = $row["nombre"];
-      ?>
-                              <option name="valor"> <?= $campo?> </option>                        
-      <?php
-        }
-      ?>
+            ?>
+              <option name='valor'><?=$campo?></option>;
+            <?php
+              }
+            ?>
                             </select>
                             </div>
                       </div>
-
-                        <!-- Price -->
-                        <div class="form-group">
-                            <label for="price" class="col-md-3 control-label">Price</label>
-                            <div class="col-md-9">
-                                <input type="number" class="form-control"id="price" name="price" placeholder="Price of Product">
-                            </div>
-                        </div>
-                        <!-- Description -->
-                        <div class="form-group">
-                          <label for="description" class="col-md-3 control-label">Description</label>
-                            <div class="col-md-9">
-                              <textarea class="form-control" rows="5" id="description" name="description"></textarea>
-                            </div>
-                        </div>
-                        <!-- File -->
-                        <div class="form-group">
-                                <label for="name" class="col-md-3 control-label">Picture</label>
-                                <div class="col-md-9">
-                                      <input type="file" name="ImageUpload">
-                                </div>
-                          </div>
                         <!-- Button -->
                         <div class="form-group">
                             <div class="col-md-offset-3 col-md-9">
@@ -92,7 +54,7 @@ if(isset($_SESSION['logueado']) and $_SESSION['logueado'] and $_SESSION['userid'
 </div>
 </div>
 
-';
+<?php
 }
 else {
   echo '
@@ -102,4 +64,6 @@ else {
   </div>
   </div>';
 }
+
+
 include('footer.php');?>
