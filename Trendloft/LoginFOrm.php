@@ -18,18 +18,29 @@
                       <strong>¡Error!</strong>  User Doesn´t Exist.
                     </div>
 
-                      <div style="margin-bottom: 25px" class="input-group">
-                                  <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-                                  <input id="login-username" type="text" class="form-control" name="username" value="" placeholder="Email">
-                      </div>
+                    <!--Email (id:login-username)-->
+                    <div style="margin-bottom: 25px" class="input-group">
+                        <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                        <input id="login-username" type="text" class="form-control" name="username"
+                            pattern="^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$"
+                            oninvalid="setCustomValidity('Campo obligatorio, ej: correo@dominio.com')"
+                            oninput="setCustomValidity('')" onblur="onBlurDeInputs(this.id)"
+                            placeholder="Email" maxlength="30" required>
+                    </div>
 
-                      <div style="margin-bottom: 25px" class="input-group">
-                                  <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
-                                  <input id="login-password" type="password" class="form-control" name="password" placeholder="Password">
-                              </div>
+
+                     <!--Password (id:login-password)-->
+                     <div style="margin-bottom: 25px" class="input-group">
+                         <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+                         <input id="login-password" type="password" class="form-control" name="password"
+                         placeholder="Password" oninput="setCustomValidity('')" onblur="onBlurDeInputs(this.id)"
+                         oninvalid="setCustomValidity('Campo obligatorio, debe contener mínimo 7 caracteres, 1 número y una letra en mayúsculas')"
+                         pattern="^((?=\S*?[A-Z])(?=\S*?[a-z])(?=\S*?[0-9]).{6,})\S$"
+                         maxlength="12" required>
+                    </div>
 
 
-
+                    <!--Remember me-->
                       <div class="input-group">
                                 <div class="checkbox">
                                   <label>
@@ -39,9 +50,8 @@
                               </div>
 
 
+                        <!-- Button -->
                           <div style="margin-top:10px" class="form-group">
-                              <!-- Button -->
-
                               <div class="col-sm-12 controls">
                               <input type="submit" class="btn btn-success" name="loginbutton" value="Login">
                               </div>
@@ -76,29 +86,48 @@
 
 
 
-
+                          <!-- Email (id:signup-username)-->
                           <div class="form-group">
                               <label for="email" class="col-md-3 control-label">Email</label>
                               <div class="col-md-9">
-                                  <input type="text" class="form-control" name="email" placeholder="Email Address">
+                                  <input type="text" class="form-control" name="email" id="signup-username"
+                                  placeholder="Email Address"
+                                  pattern="^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$"
+                                  oninvalid="setCustomValidity('Campo obligatorio, ej: correo@dominio.com')"
+                                  oninput="setCustomValidity('')" onblur="onBlurDeInputs(this.id)"
+                                  maxlength="30" required>
                               </div>
                           </div>
 
-
+                          <!-- Password (id:signup-password)-->
                           <div class="form-group">
                               <label for="password" class="col-md-3 control-label">Password</label>
                               <div class="col-md-9">
-                                  <input type="password" class="form-control" name="passwd" placeholder="Password">
+                                  <input type="password" class="form-control" name="passwd" id="signup-password"
+                                  placeholder="Password" oninput="setCustomValidity('')" onblur="onBlurDeInputs(this.id)"
+                                  oninvalid="setCustomValidity('Campo obligatorio, debe contener mínimo 7 caracteres, 1 número y una letra en mayúsculas')"
+                                  pattern="^((?=\S*?[A-Z])(?=\S*?[a-z])(?=\S*?[0-9]).{6,})\S$"
+                                  maxlength="12" required>
                               </div>
                           </div>
+
+                          <!-- Confirm Password (id:signup-cpassword)-->
                           <div class="form-group">
                               <label for="Cpassword" class="col-md-3 control-label"> Confirm Password</label>
+                              <label for="match" style="display: none; color: red;"
+                                id="signup-clabel">
+                                  Confirmation doesn't match!
+                              </label>
                               <div class="col-md-9">
-                                  <input type="password" class="form-control" name="Cpasswd" placeholder="Password">
+                                  <input type="password" class="form-control" name="Cpasswd" id="signup-cpassword"
+                                  placeholder="Password confirmation" oninput="setCustomValidity('')" onblur="onBlurDeInputs(this.id)"
+                                  oninvalid="setCustomValidity('Campo obligatorio')"
+                                  pattern="^((?=\S*?[A-Z])(?=\S*?[a-z])(?=\S*?[0-9]).{6,})\S$"
+                                  maxlength="12" required>
                               </div>
                           </div>
 
-
+                          <!-- News -->
                           <div class="input-group">
                                     <div class="checkbox">
                                       <label>
@@ -107,9 +136,8 @@
                                     </div>
                           </div>
 
-
+                          <!-- Button -->
                           <div class="form-group">
-                              <!-- Button -->
                               <div class="col-md-offset-3 col-md-9">
                                 <input type="submit" class="btn btn-success" name="registerbutton"   value="Register">
                                 </div>
