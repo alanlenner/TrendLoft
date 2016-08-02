@@ -1,6 +1,10 @@
 <?php
+
+    //Usuario: adminTrendloft@admin.com
+    //Passwordd: Trndlft123
+
   /* PC ALAN */
-  
+  /*
   $user = 'root';
   $password = '';
   $db = 'trendloft';
@@ -8,13 +12,13 @@
   $port = 3306;
   /*
   /* PC JAVIER */
-  /*
+
   $user = 'root';
   $password = 'root';
   $db = 'trendloft';
   $host = 'localhost';
   $port = 8889;
-  */
+
 
   $mysqli = new mysqli($host, $user,$password, $db, $port);
 if ($mysqli->connect_errno) {

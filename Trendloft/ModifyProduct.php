@@ -3,7 +3,7 @@ session_start();
  include('header.php');
 
 
-if(isset($_SESSION['logueado']) and $_SESSION['logueado'] and $_SESSION['userid']== 'admin'){
+if(isset($_SESSION['logueado']) and $_SESSION['logueado'] and $_SESSION['userid']== 'adminTrendloft@admin.com'){
 ?>
 <div class="container">
 <div class="row">
