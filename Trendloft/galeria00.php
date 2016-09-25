@@ -1,3 +1,4 @@
+<!--<link rel="stylesheet" href="resources/css/estilogaleria.css">-->
 <?php
   session_start();
 	include('header.php');
@@ -48,7 +49,7 @@
     </ol>
 
     <!-- Wrapper for slides -->
-    <div class="carousel-inner" role="listbox">
+    <div class="col-md-12 carousel-inner" role="listbox">
       <?php
 				$imageDisplay = "";
 				$images = scandir("resources/images/galeria/$tipo");
@@ -79,31 +80,58 @@
 
 			        if(isset($_SESSION['logueado']) and $_SESSION['logueado']){
 								$imageDisplay .= '<img src="resources/images/galeria/'. $tipo .'/'. $file .'" alt="Chania" width="460"
-							 height="345"><div class="carousel-caption"><h3>'. $titulo .'</h3> <p>'. $descripcion .'</p>
-							 <h2 style="display:block;">Price: '. $precio .'$</h2></div></div>';
+							 height="345">
+               </div>
+                 <div class="col-md-12 panel panel-info" >
+                     <div class="panel-heading">
+                             <div class="panel-title">'. $titulo .'</div>
+                             <div style="float:right; font-size: 80%; position: relative; top:-10px"></div>
+                     </div>
+                     <div class="panel-body">
+                       <p>'. $descripcion .'</p>
+                       <h4>Price:'.$precio.'</h4>
+
+                     </div>
+               </div>
+              ';
 			        }
 							else{
 								$imageDisplay .= '<img src="resources/images/galeria/'. $tipo .'/'. $file .'" alt="Chania" width="460"
-								height="345"><div class="carousel-caption"><h3>'. $titulo .'</h3><p>'. $descripcion .'</p>
-								<h4>Price: <a class="loginplz" href="login.php">Log in!</a></h4></div></div>';
+								height="345">
+                    </div>
+                  <div class="col-md-12 panel panel-info" >
+                      <div class="panel-heading">
+                              <div class="panel-title">'. $titulo .'</div>
+                      </div>
+                      <div class="panel-body">
+                        <p>'. $descripcion .'</p>
+                        <h4>Price: <a class="loginplz" href="login.php">Log in!</a></h4>
+
+                      </div>
+                  </div>
+
+            ';
 							}
+
 
 							$i++;
 					}
 				}
 				echo ($imageDisplay);
 			 ?>
-    </div>
+
 
     <!-- Left and right controls -->
-    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
-      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-      <span class="sr-only">Previous</span>
-    </a>
-    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
-      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-      <span class="sr-only">Next</span>
-    </a>
+
+      </div>
+      <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
   </div>
 </div>
 

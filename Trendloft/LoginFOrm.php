@@ -39,8 +39,7 @@
                          maxlength="12" required>
                     </div>
 
-<<<<<<< HEAD
-=======
+
 
                     <!--Remember me-->
                       <div class="input-group">
@@ -51,7 +50,6 @@
                                 </div>
                               </div>
 
->>>>>>> 21089942e4a6373666d5ece01562476ae96e66cc
 
                         <!-- Button -->
                           <div style="margin-top:10px" class="form-group">
