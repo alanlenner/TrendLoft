@@ -98,6 +98,11 @@
                 </ul>
               </div>
             </li>
+            <?php
+                if(isset($_SESSION['logueado']) and $_SESSION['logueado']){
+                    echo '<li class=""><a href="pdf_server.php?file=catalog">Catalog!</a></li>';
+                }
+             ?>
           </ul>
 
 

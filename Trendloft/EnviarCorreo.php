@@ -1,45 +1,41 @@
 <?php
-require 'vendors/phpmailer/class.phpmailer.php';
-try {
- 
-// Crear una nueva  instancia de PHPMailer habilitando el tratamiento de excepciones
-$mail = new PHPMailer(true);
- 
-// Configuramos el protocolo SMTP con autenticación
-$mail->IsSMTP();
-$mail->SMTPAuth = true;
- 
-// Configuración del servidor SMTP
-$mail->Port = 25
-$mail->Host = 'miservidor.smpt.com';
-$mail->Username   = "ejemplo@developando.com"
-$mail->Password = "XXXXXXX"
- 
-// Configuración cabeceras del mensaje
-$mail->From = "remite@developando.com";
-$mail->FromName = "Mi nombre y apellidos";
- 
-$mail->AddAddress("destino1@correo.com","Nombre 1");
-$mail->AddAddress("destino2@correo.com","Nombre 2");
- 
-$mail->AddCC("copia1@correo.com","Nombre copia 1");
- 
-$mail->AddBCC(“copia1@correo.com”,”Nombre copia 1″);
- 
-$mail->Subject = "Asunto del correo";
- 
-// Creamos en una variable el cuerpo, contenido HMTL, del correo
-$body  = "Proebando los correos con un tutorial<br>";
-$body .= "hecho por <strong>Developando</strong>.<br>";
-$body .= "<font color='red'>Visitanos pronto</font>";
- 
-$mail->Body = $body;
- 
-// Ficheros adjuntos
-$mail->AddAttachment("misImagenes/foto1.jpg", "developandoFoto.jpg");
-$mail->AddAttachment("files/proyecto.zip", "demo-proyecto.zip");
- 
-// Enviar el correo
-$mail->Send();
- 
+    date_default_timezone_set('Etc/UTC');
+    require 'PHPMailer/PHPMailerAutoload.php';
+
+    $mail = new PHPMailer;
+
+    $mail->SMTPDebug = 2;                               // Enable verbose debug output
+
+    $mail->Debugoutput = 'html';
+
+    //$mail->isSMTP();                                      // Set mailer to use SMTP
+    $mail->Host = 'smtp.gmail.com';  // Specify main and backup SMTP servers
+    $mail->SMTPAuth = true;                               // Enable SMTP authentication
+    $mail->Username = 'merchan1395@gmail.com';                 // SMTP username
+    $mail->Password = 'durty23686197';                           // SMTP password
+    $mail->SMTPSecure = 'tls';                            // Enable TLS encryption, `ssl` also accepted
+    $mail->Port = 587;                                    // TCP port to connect to
+
+    $mail->setFrom('from@example.com', 'Mailer');
+    $mail->addAddress('j.merchan95@hotmail.com', 'Joe User');     // Add a recipient
+    $mail->addAddress('ellen@example.com');               // Name is optional
+    $mail->addReplyTo('info@example.com', 'Information');
+    $mail->addCC('cc@example.com');
+    $mail->addBCC('bcc@example.com');
+
+    //$mail->addAttachment('/var/tmp/file.tar.gz');         // Add attachments
+    //$mail->addAttachment('/tmp/image.jpg', 'new.jpg');    // Optional name
+    $mail->isHTML(true);                                  // Set email format to HTML
+
+    $mail->Subject = 'Here is the subject';
+    $mail->Body    = 'This is the HTML message body <b>in bold!</b>';
+    $mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
+
+    if(!$mail->send()) {
+        echo 'Message could not be sent.';
+        echo 'Mailer Error: ' . $mail->ErrorInfo;
+    } else {
+        echo 'Message has been sent';
+    }
+
 ?>
