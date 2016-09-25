@@ -24,6 +24,17 @@ mysqli_close($mysqli);
 function insertaruser($usuario, $contrasena, $publicidad)
 {
   include('conexion.php');
+
+  $sql = "SELECT correo FROM usuario";
+    $result = mysqli_query($mysqli, $sql);
+    while ($row = mysqli_fetch_array($result)) {
+      if (($usuario == $row['correo']))
+      {
+        return 0;
+      }
+    }
+
+
   $codigoverificacion = rand(000000000,999999999);
     $sql = "INSERT INTO usuario (correo,password,publicidad,code) VALUES ('$usuario','$contrasena','$publicidad',$codigoverificacion)";
     if ($stmt = mysqli_prepare($mysqli, $sql)) {
@@ -32,6 +43,7 @@ function insertaruser($usuario, $contrasena, $publicidad)
       mysqli_stmt_close($stmt);
     }
   mysqli_close($mysqli);
+  return 1;
 // Varios destinatarios
 /*$para  = $usuario; // atención a la coma
 // título
@@ -83,14 +95,12 @@ if(!isset($_SESSION['userid'])) //para saber si existe o no ya la variable de se
             echo '<div class="alert alert-success">
             <strong>Success!</strong> You logged in as: '.$User.'
             </div>';
-
-
         }
         else
         {
             echo '<div class="alert alert-warning alert-dismissable" id="alert">
               <button type="button" class="close" data-dismiss="alert">&times;</button>
-              <strong>¡Error!</strong>  User Doesn´t Exist.
+              <strong>¡Error!</strong>  User Doesn´t Exist, maybe is something wrong with ur username or password. Please Check.
             </div>';
         }
     }
@@ -101,14 +111,34 @@ if(!isset($_SESSION['userid'])) //para saber si existe o no ya la variable de se
         if (isset($_POST['news']))
         {
           $News=$_POST['news'];
-          insertarUser($Email,$Pwd,'Si');
+          if(insertarUser($Email,$Pwd,'Si')== 1)
+          {
+            echo '<div class="alert alert-success">
+            <strong>Success!</strong> You registered in as: '.$Email.' awaiting email confirmation
+            </div>';
+          }
+          else{
+            echo '<div class="alert alert-warning alert-dismissable" id="alert">
+              <button type="button" class="close" data-dismiss="alert">&times;</button>
+              <strong>¡Error!</strong>  Wrong input.
+            </div>';
+          }
+
         }
         else {
-          insertarUser($Email,$Pwd,'No');
-        }
-        echo '<div class="alert alert-success">
-        <strong>Success!</strong> You registered in as: '.$Email.' awaiting email confirmation
-        </div>';
+          if(insertarUser($Email,$Pwd,'No')== 1)
+          {
+            echo '<div class="alert alert-success">
+            <strong>Success!</strong> You registered in as: '.$Email.' awaiting email confirmation
+            </div>';
+          }
+          else{
+            echo '<div class="alert alert-warning alert-dismissable" id="alert">
+              <button type="button" class="close" data-dismiss="alert">&times;</button>
+              <strong>¡Error!</strong>  Wrong input.
+            </div>';
+          }}
+
     }
   } else {
     // Si la variable de sesión ‘userid’ ya existe, que muestre el mensaje de saludo.
