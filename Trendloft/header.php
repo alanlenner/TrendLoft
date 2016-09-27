@@ -78,23 +78,23 @@
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
           <ul class="nav navbar-nav">
             <li class=""><a href="index.php">Home </a></li>
-            <li class=""><a href="galeria00.php?tipo=Cabinets">Cabinets </a></li>
+            <li class=""><a href="galery.php?tipo=Cabinets">Cabinets </a></li>
             <li class="desplegable"><a href="#" class="despeglable-opcion">Furniture</a>
               <div>
                 <ul class="desplegable">
-                  <li><a href="galeria00.php?tipo=DiningChairs">Dining Chairs</a></li>
-                  <li><a href="galeria00.php?tipo=DiningTables">Dining Tables</a></li>
-                  <li><a href="galeria00.php?tipo=Sofas">Sofas</a></li>
-                  <li><a href="galeria00.php?tipo=Barstools">Barstools</a></li>
+                  <li><a href="galery.php?tipo=DiningChairs">Dining Chairs</a></li>
+                  <li><a href="galery.php?tipo=DiningTables">Dining Tables</a></li>
+                  <li><a href="galery.php?tipo=Sofas">Sofas</a></li>
+                  <li><a href="galery.php?tipo=Barstools">Barstools</a></li>
                 </ul>
               </div>
             </li>
             <li class="desplegable"><a href="#" class="despeglable-opcion">Lighting</a>
               <div>
                 <ul class="desplegable">
-                  <li><a href="galeria00.php?tipo=Chandeliers">Chandeliers</a></li>
-                  <li><a href="galeria00.php?tipo=Sconces">Sconces</a></li>
-                  <li><a href="galeria00.php?tipo=Pendants">Pendants</a></li>
+                  <li><a href="galery.php?tipo=Chandeliers">Chandeliers</a></li>
+                  <li><a href="galery.php?tipo=Sconces">Sconces</a></li>
+                  <li><a href="galery.php?tipo=Pendants">Pendants</a></li>
                 </ul>
               </div>
             </li>
