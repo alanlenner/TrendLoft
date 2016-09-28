@@ -71,11 +71,11 @@
                  Welcome $nombre!
                </p>
              </div>
-             <a href='Logout.php'>Logout</a>
+             <a href='logout.php'>Logout</a>
              ";
         }
         else{
-            echo "<a href='Login.php'>Log In</a>";
+            echo "<a href='login.php'>Log In</a>";
         }
 
          ?>
